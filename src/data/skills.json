@@ -1,0 +1,30 @@
+[
+  {
+    "title": "React",
+    "imageSrc": "skills/react.png"
+  },
+  {
+    "title": "Java",
+    "imageSrc": "skills/java.jpg"
+  },
+  {
+    "title": "Microservice",
+    "imageSrc": "skills/microservices.png"
+  },
+  {
+    "title": "Database",
+    "imageSrc": "skills/rdbms.png"
+  },
+  {
+    "title": "Figma",
+    "imageSrc": "skills/figma.png"
+  },
+  {
+    "title": "AWS",
+    "imageSrc": "skills/aws.png"
+  },
+  {
+    "title": "DevOps",
+    "imageSrc": "skills/devops.png"
+  }
+]

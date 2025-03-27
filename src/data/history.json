@@ -1,0 +1,65 @@
+[
+  {
+    "role": "Princ Engineer - Software Development",
+    "organisation": "Verizon",
+    "startDate": "Sept, 2018",
+    "endDate": "Present",
+    "experiences": ["Worked on CRM Applications", "Worked on SPOG applications"],
+    "imageSrc": "history/verizon.jpg"
+  },
+  {
+    "role": "MTS IV Cslt-Sys Engrg",
+    "organisation": "Verizon",
+    "startDate": "March, 2015",
+    "endDate": "Aug, 2018",
+    "experiences": ["Worked on quoting tool", "Worked on Ordering tool"],
+    "imageSrc": "history/verizon.jpg"
+  },
+  {
+    "role": "MTS IV Cslt-Sys Engrg",
+    "organisation": "Verizon",
+    "startDate": "Jan, 2006",
+    "endDate": "March, 2015",
+    "experiences": [
+      "Worked on decomm project after Verizon and MCI merger",
+      "Developed new systemGCH (Global Customer Hierarchy)"
+    ],
+    "imageSrc": "history/verizon.jpg"
+  }
+  ,
+  {
+    "role": "Sr. Application Developer",
+    "organisation": "MCI Inc",
+    "startDate": "March, 2004",
+    "endDate": "Jan, 2006",
+    "experiences": [
+      "Worked on Master Data Management Project",
+      "Developed data transformation engine"
+    ],
+    "imageSrc": "history/MCI.png"
+  }
+  ,
+  {
+    "role": "Software Developer",
+    "organisation": "TEKsystems, Inc.",
+    "startDate": "Nov, 2003",
+    "endDate": "March, 2004",
+    "experiences": [
+      "Internal Account Repository project for MCI",
+      "Developed IAR Project"
+    ],
+    "imageSrc": "history/TekSystem.jpg"
+  }
+  ,
+  {
+    "role": "Software Engineer II",
+    "organisation": "SkyTel Communication Inc.",
+    "startDate": "Feb, 2000",
+    "endDate": "Nov, 2003",
+    "experiences": [
+      "Worked on ecommerce project for pager sale and feature",
+      "Developed customer service interace"
+    ],
+    "imageSrc": "history/SkyTel.png"
+  }
+]
