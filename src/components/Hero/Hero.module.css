@@ -102,6 +102,17 @@
   z-index: 0;
 }
 
+.agentlink {
+  display: inline-block;
+  padding: 7px 7px;
+  background-color: #1e4f8f;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  
+}
+
 @media screen and (max-width: 830px) {
   .container {
     flex-direction: column-reverse;
