@@ -1,9 +1,17 @@
 [
   {
+    "role": "Senior Developer",
+    "organisation": "FedTec",
+    "startDate": "Feb, 2025",
+    "endDate": "Till present",
+    "experiences": ["ACA Verification Services (AVS)", "Premium Tax Credit (PTC) "],
+    "imageSrc": "history/FedTec.png"
+  },
+  {
     "role": "Princ Engineer - Software Development",
     "organisation": "Verizon",
     "startDate": "Sept, 2018",
-    "endDate": "Present",
+    "endDate": "Oct, 2024",
     "experiences": ["Worked on CRM Applications", "Worked on SPOG applications"],
     "imageSrc": "history/verizon.jpg"
   },

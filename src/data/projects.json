@@ -1,26 +1,26 @@
 [
   {
-    "title": "Project A",
-    "imageSrc": "projects/project.png",
-    "description": "This is a project made to learn the latest languages by building an app.",
-    "skills": ["React", "Express", "Node"],
-    "demo": "https://www.example.com",
-    "source": "https://www.github.com"
+    "title": "POC to modernize legacy technology",
+    "imageSrc": "projects/SpringBoot.png",
+    "description": "This work was to modernize this legacy technology(IBM MQ, JMS and SOAP Webservice) with Spring Boot 3.43 based microservices,  Java 17, Gradle 8.7, Spring Kafka, Confluent Kafka, Docker, Docker Hub and Red Hat OpenShift(a robust Kubernetes-based enterprise platform).",
+    "skills": ["Spring Boot 3.43", "Java 17", "Gradle 8.7", "Spring Kafka", "Confluent Kafka", "Docker", "Docker Hub", "Red Hat OpenShift"],
+    "demo": "https://github.com/sanjaydubey31/microservices-repo/blob/main/kafka_services/deck/Proof%20of%20Concept%20Kafka.pptx",
+    "source": "https://github.com/sanjaydubey31/microservices-repo.git"
   },
   {
-    "title": "Project B",
-    "imageSrc": "projects/project.png",
-    "description": "This is a project made to learn the latest languages by building an app.",
-    "skills": ["React", "Express", "Node", "Sass"],
-    "demo": "https://www.example.com",
-    "source": "https://www.github.com"
+    "title": "Generic Chatbot",
+    "imageSrc": "projects/ChatBot.png",
+    "description": "I’ve developed an end-to-end project and implemented a personal CI/CD pipeline using GitHub Action. Whenever I push code to my GitHub repository, it automatically deploys the latest version to my Hugging Face Space. Users need to provide their own GROQ and Tavily API keys and select the LLM to use this tool.",
+    "skills": ["langchain", "langgraph",  "langchain_core", "langchain_groq", "langchain_openai", "streamlit"],
+    "demo": "https://huggingface.co/spaces/sanjaydubey733/agenticai",
+    "source": "https://github.com/sanjaydubey31/Python-Projects.git"
   },
   {
-    "title": "Project C",
-    "imageSrc": "projects/project.png",
-    "description": "This is a project made to learn the latest languages by building an app.",
-    "skills": ["React", "Express", "Node"],
-    "demo": "https://www.example.com",
-    "source": "https://www.github.com"
+    "title": "AI Agents",
+    "imageSrc": "projects/AIAgents.jpeg",
+    "description": "I have developed several AI Agents like Blog Generator, Market Analysis, Code Review and Resume Assistant tools and deployed on HuggingFace and Streamlit. I am just giving one link in demo, but if you want to see all the AI Agents then contact me I can provide the links.",
+    "skills": ["langchain", "langgraph", "langSmith", "AGNO", "RAG", "NLP", "Prompt Engineering", "ollama", "GROQ", "OpenAI", "Hugging Face"],
+    "demo": "https://huggingface.co/spaces/sanjaydubey733/skd-ai-agent",
+    "source": "https://github.com/sanjaydubey31/AIAgents.git"
   }
 ]

@@ -27,4 +27,13 @@
     "title": "DevOps",
     "imageSrc": "skills/devops.png"
   }
+  ,
+  {
+    "title": "Gen AI",
+    "imageSrc": "skills/GenAI.png"
+  },
+  {
+    "title": "Agentic AI",
+    "imageSrc": "skills/AgenticAI.png"
+  }
 ]
