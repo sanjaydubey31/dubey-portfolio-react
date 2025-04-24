@@ -38,6 +38,9 @@ export const Navbar = () => {
           <li>
             <a href="#contact">Contact</a>
           </li>
+          <li>
+            <a href="#chatbotsanjay">AI Assistant</a>
+          </li>
         </ul>
       </div>
     </nav>

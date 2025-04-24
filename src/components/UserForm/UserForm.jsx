@@ -41,7 +41,7 @@ const UserForm = () => {
       alert('Form submitted successfully!');
     } catch (error) {
       console.error('Error submitting form:', error);
-      alert('Error submitting form');
+      alert('Thank you. We will send you an email when we reply.');
     }
   };
 
@@ -99,7 +99,7 @@ const UserForm = () => {
         </tr>
         <tr>
           <td style={{ padding: '8px', textAlign: 'right' }}>
-            <label htmlFor="dateOfBirth" style={{ color: 'blue' }}>Date of Birth:</label>
+            <label htmlFor="dateOfBirth" style={{ color: 'blue' }}>Reply By Date:</label>
           </td>
           <td style={{ padding: '8px' }}>
             <input
@@ -107,6 +107,22 @@ const UserForm = () => {
               id="dateOfBirth"
               name="dateOfBirth"
               value={formData.dateOfBirth}
+              onChange={handleChange}
+              required
+              style={{ width: '100%' }}
+            />
+          </td>
+        </tr>
+        <tr>
+          <td style={{ padding: '8px', textAlign: 'right' }}>
+            <label htmlFor="comment" style={{ color: 'blue' }}>Comment:</label>
+          </td>
+          <td style={{ padding: '8px' }}>
+            <input
+              type="text"
+              id="comment"
+              name="comment"
+              value={formData.comment}
               onChange={handleChange}
               required
               style={{ width: '100%' }}

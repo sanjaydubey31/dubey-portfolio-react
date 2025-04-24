@@ -5,7 +5,7 @@ import { Experience } from "./components/Experience/Experience";
 import { Hero } from "./components/Hero/Hero";
 import { Navbar } from "./components/Navbar/Navbar";
 import { Projects } from "./components/Projects/Projects";
-//import { Chatbot } from "./components/Chatbot/Chatbot";
+import { Chatbot } from "./components/Chatbot/Chatbot";
 import {UserApp} from "./components/UserForm/UserForm";
 
 function App() {
@@ -20,6 +20,16 @@ function App() {
       <Projects /> 
       <Contact />
       <UserApp />
+      <div
+      style={{
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        height: '40vh',
+      }}
+    >
+    <Chatbot />
+    </div>
     </div>
   );
 }

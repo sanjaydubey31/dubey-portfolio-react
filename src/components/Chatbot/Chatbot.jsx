@@ -15,19 +15,62 @@ export const Chatbot = () => {
   const handleNonStreamSubmit = async (e) => {
     e.preventDefault();
     if (!input) return;
+  
+    addMessage("User", input);
+    setInput("");
+    setIsLoading(true);
+  
+    const payload = {
+      input_value: input,
+      output_type: "chat",
+      input_type: "chat",
+      session_id: "user_1", // or make this dynamic if needed
+    };
+   //alert("hello")
+    try {
+      const res = await axios.post(
+        "https://sanjaydubey733-dubey-portfolio.hf.space/langflow",     //https://sanjaydubey733-dubey-portfolio.hf.space/, http://localhost:8013/langflow
+        payload,
+        {
+          headers: {
+            "Content-Type": "application/json",
+            
+          },
+        }
+      );
+  
+      // If response format is consistent, you might want to extract `.answer` or adjust this line
+      
+      const replyText = res.data.outputs[0].outputs[0].results.message.text;
+      console.log(replyText)
+      //alert(replyText)
+      addMessage("Assistant", replyText); 
+    } catch (error) {
+      alert("Langflow Error:", error);
+      addMessage("Assistant", "An error occurred in handleLangflowSubmit. Please try again.");
+    } finally {
+      setIsLoading(false);
+    }
+  };
+  
+
+  const handleNonStreamSubmit_bak = async (e) => {
+    e.preventDefault();
+    if (!input) return;
 
     addMessage("User", input);
     setInput("");
     setIsLoading(true);
 
     try {
-      const res = await axios.post("http://127.0.0.1:8000/nostream", {
+      const res = await axios.post("http://localhost:8013/langflow", {
         question: input,
       });
-      addMessage("Bot", res.data.answer);
+      const replyText = res.data.outputs[0].outputs[0].results.message.text;
+      addMessage("Assistant", replyText);
     } catch (error) {
       console.error("Error:", error);
-      addMessage("Bot", "An error occurred. Please try again.");
+      addMessage("Assistant", "An error occurred in handleNonStreamSubmit. Please try again.");
     } finally {
       setIsLoading(false);
     }
@@ -66,14 +109,14 @@ export const Chatbot = () => {
       addMessage("Bot", "...");
     } catch (error) {
       console.error("Error:", error);
-      addMessage("Bot", "An error occurred. Please try again.");
+      addMessage("Bot", "An error occurred in handleStreamSubmit. Please try again.");
       setIsLoading(false);
     }
   };
 
   return (
     <div style={{ backgroundColor: "#f0f0f0", padding: "20px", width: "400px", margin: "5 auto" }}>
-      <h1>Chatbot</h1>
+      <h4>AI Assistant</h4>
       <div
         style={{
           border: "1px solid #ccc",
