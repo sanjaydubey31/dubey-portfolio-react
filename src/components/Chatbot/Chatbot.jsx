@@ -115,13 +115,13 @@ export const Chatbot = () => {
   };
 
   return (
-    <div style={{ backgroundColor: "#f0f0f0", padding: "20px", width: "400px", margin: "5 auto" }}>
+    <div style={{ backgroundColor: "lightblue", padding: "20px", width: "600px", margin: "5 auto" }}>
       <h4>AI Assistant</h4>
       <div
         style={{
           border: "1px solid #ccc",
           padding: "10px",
-          height: "150px",
+          height: "200px",
           overflowY: "auto",
           marginBottom: "20px",
         }}
