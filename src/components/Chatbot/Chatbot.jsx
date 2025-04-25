@@ -29,7 +29,9 @@ export const Chatbot = () => {
    //alert("hello")
     try {
       const res = await axios.post(
-        "https://sanjaydubey733-dubey-portfolio.hf.space/langflow",     //https://sanjaydubey733-dubey-portfolio.hf.space/, http://localhost:8013/langflow
+        "https://sanjaydubey733-dubey-portfolio.hf.space/langChain",
+        //"http://localhost:8013/langChain",
+        //"https://sanjaydubey733-dubey-portfolio.hf.space/langflow",     //https://sanjaydubey733-dubey-portfolio.hf.space/, http://localhost:8013/langflow
         payload,
         {
           headers: {
@@ -40,8 +42,9 @@ export const Chatbot = () => {
       );
   
       // If response format is consistent, you might want to extract `.answer` or adjust this line
-      
-      const replyText = res.data.outputs[0].outputs[0].results.message.text;
+      console.log(res.data.response)
+      const replyText = res.data.response;
+      //const replyText = res.data.outputs[0].outputs[0].results.message.text;
       console.log(replyText)
       //alert(replyText)
       addMessage("Assistant", replyText); 
