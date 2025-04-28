@@ -3,7 +3,7 @@ import axios from "axios";
 import styles from "./Chatbot.module.css";
 import { getImageUrl } from "../../utils";
 
-export const Chatbot = () => {
+export const Chatbot = ({ isOpen, onClose }) => {
   const [messages, setMessages] = useState([]);
   const [input, setInput] = useState("");
   const [isLoading, setIsLoading] = useState(false);
@@ -24,38 +24,29 @@ export const Chatbot = () => {
       input_value: input,
       output_type: "chat",
       input_type: "chat",
-      session_id: "user_1", // or make this dynamic if needed
+      session_id: "user_1",
     };
-   //alert("hello")
+
     try {
       const res = await axios.post(
         "https://sanjaydubey733-dubey-portfolio.hf.space/langChain",
-        //"http://localhost:8013/langChain",
-        //"https://sanjaydubey733-dubey-portfolio.hf.space/langflow",     //https://sanjaydubey733-dubey-portfolio.hf.space/, http://localhost:8013/langflow
         payload,
         {
           headers: {
             "Content-Type": "application/json",
-            
           },
         }
       );
   
-      // If response format is consistent, you might want to extract `.answer` or adjust this line
-      console.log(res.data.response)
       const replyText = res.data.response;
-      //const replyText = res.data.outputs[0].outputs[0].results.message.text;
-      console.log(replyText)
-      //alert(replyText)
-      addMessage("Assistant", replyText); 
+      addMessage("Assistant", replyText);
     } catch (error) {
-      alert("Langflow Error:", error);
-      addMessage("Assistant", "An error occurred in handleLangflowSubmit. Please try again.");
+      console.error("Error:", error);
+      addMessage("Assistant", "An error occurred. Please try again.");
     } finally {
       setIsLoading(false);
     }
   };
-  
 
   const handleNonStreamSubmit_bak = async (e) => {
     e.preventDefault();
@@ -118,8 +109,9 @@ export const Chatbot = () => {
   };
 
   return (
-    <div id="chatbotsanjay" className={styles.chatbotWrapper}>
+    <div className={`${styles.chatbotWrapper} ${isOpen ? styles.open : ''}`}>
       <div className={styles.chatbotContainer}>
+        <button className={styles.closeButton} onClick={onClose}>×</button>
         <div className={styles.chatbotHeader}>
           <span>🤖</span>
           <h4 className={styles.chatbotTitle}>AI Assistant</h4>
@@ -136,10 +128,7 @@ export const Chatbot = () => {
             </div>
           ))}
         </div>
-        <form
-          className={styles.chatForm}
-          onSubmit={isLoading ? handleStreamSubmit : handleNonStreamSubmit}
-        >
+        <form className={styles.chatForm} onSubmit={handleNonStreamSubmit}>
           <input
             type="text"
             value={input}
@@ -148,11 +137,7 @@ export const Chatbot = () => {
             placeholder="Type your message..."
             disabled={isLoading}
           />
-          <button
-            type="submit"
-            className={styles.chatButton}
-            disabled={isLoading}
-          >
+          <button type="submit" className={styles.chatButton} disabled={isLoading}>
             {isLoading ? (
               <>
                 <span>Loading</span>

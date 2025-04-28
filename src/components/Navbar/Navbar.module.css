@@ -1,22 +1,76 @@
 @import "../../vars.css";
 
 .navbar {
-  position: relative;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: var(--color-bg);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  height: 120px;
+}
+
+.navbarContent {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 2.5rem;
   display: flex;
-  align-items: center;
   justify-content: space-between;
-  padding-top: 61px;
-  z-index: 2;
-  margin: 0 10%;
+  align-items: center;
+  height: 100%;
 }
 
-.title {
-  font-size: 30px;
-  font-weight: 600;
-  text-decoration: none;
+.navbarLogo {
+  font-size: 2.8rem;
+  font-weight: bold;
   color: var(--color-text);
+  text-decoration: none;
 }
 
+.navbarLinks {
+  display: flex;
+  gap: 3rem;
+  align-items: center;
+}
+
+.navbarLink {
+  color: var(--color-text);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  font-size: 1.5rem;
+}
+
+.navbarLink:hover {
+  color: var(--color-primary);
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    height: 100px;
+  }
+  
+  .navbarContent {
+    padding: 1.5rem 2rem;
+  }
+
+  .navbarLinks {
+    gap: 2rem;
+  }
+  
+  .navbarLogo {
+    font-size: 2.2rem;
+  }
+  
+  .navbarLink {
+    font-size: 1.3rem;
+  }
+}
 
 .menuBtn {
   display: none;

@@ -8,7 +8,7 @@ import {UserApp} from "../UserForm/UserForm";
 export const Hero = () => {
   return (
     <section className={styles.container}>
-      <div className={styles.content}>
+      <div  className={styles.content}>
         <h2 className={styles.title}>Hi, I'm Sanjay Dubey</h2>
         <p className={styles.description}>
         I am a passionate software engineer with 20+ years of experience building impactful, scalable solutions in the telecommunications space. I specialize in Java based Full Stack development, salesforce, devops and have recently ventured into the exciting world of Generative AI and Agentic AI. I thrive on solving complex problems, leveraging technology to make life easier for users, and staying ahead of the curve in the fast-evolving tech landscape.        

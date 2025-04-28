@@ -5,10 +5,11 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-top: 49px;
+  margin-top: 120px;
   z-index: 1;
   margin-left: 10%;
   margin-right: 10%;
+  padding: 2rem 0;
 }
 
 .content {
@@ -17,12 +18,13 @@
   align-items: flex-start;
   color: var(--color-text);
   z-index: 1;
+  max-width: 800px;
 }
 
 .title {
-  font-size: 42px;
+  font-size: 2.2rem;
   font-weight: 900;
-  margin-bottom: 33px;
+  margin-bottom: 1.2rem;
   font-family: var(--font-roboto);
   background: linear-gradient(
     90deg,
@@ -34,9 +36,10 @@
 }
 
 .description {
-  font-size: 20px;
+  font-size: 1.1rem;
   font-family: var(--font-roboto);
-  margin-bottom: 52px;
+  margin-bottom: 1.2rem;
+  line-height: 1.6;
 }
 
 .contactBtn {
@@ -44,22 +47,23 @@
   background-color: var(--color-primary);
   color: var(--color-text);
   border-radius: 50px;
-  font-size: 20px;
-  font-weight: 400;
-  padding: 7px 16px;
+  font-size: 1.1rem;
+  font-weight: 500;
+  padding: 0.7rem 1.3rem;
   box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease;
+}
+
+.contactBtn:hover {
+  transform: scale(1.05);
 }
 
 .heroImg {
-  width: 13%;
-  z-index: -1;
-  margin-right: 22px;
-  /*
-  animation-name: floating;
-  animation-duration: 3s;
-  animation-iteration-count: infinite;
-  animation-timing-function: ease-in-out;
-  */
+  width: 20%;
+  z-index: 1;
+  margin-right: 2rem;
+  border-radius: 50%;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
 }
 
 @keyframes floating {
@@ -116,9 +120,27 @@
 @media screen and (max-width: 830px) {
   .container {
     flex-direction: column-reverse;
+    margin-top: 100px;
+    padding: 1.5rem 0;
   }
 
   .content {
     align-items: center;
+    text-align: center;
+  }
+
+  .title {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+  }
+
+  .description {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .heroImg {
+    width: 40%;
+    margin: 0 0 2rem 0;
   }
 }
