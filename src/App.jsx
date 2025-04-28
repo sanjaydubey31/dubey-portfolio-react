@@ -13,23 +13,12 @@ function App() {
     <div className={styles.App}> 
       <Navbar />
       <Hero />
-      {/* <Chatbot /> */}
-
       <About />
       <Experience />
       <Projects /> 
       <Contact />
       <UserApp />
-      <div
-      style={{
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        height: '40vh',
-      }}
-    >
-    <Chatbot />
-    </div>
+      <Chatbot />
     </div>
   );
 }

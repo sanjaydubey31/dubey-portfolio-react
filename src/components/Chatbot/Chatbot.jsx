@@ -118,45 +118,55 @@ export const Chatbot = () => {
   };
 
   return (
-    <div style={{ backgroundColor: "lightblue", padding: "20px", width: "600px", margin: "5 auto" }}>
-      <h4>AI Assistant</h4>
-      <div
-        style={{
-          border: "1px solid #ccc",
-          padding: "10px",
-          height: "200px",
-          overflowY: "auto",
-          marginBottom: "20px",
-        }}
-      >
-        {messages.map((msg, index) => (
-          <div
-            key={index}
-            style={{
-              textAlign: msg.sender === "User" ? "right" : "left",
-              margin: "10px 0",
-            }}
+    <div id="chatbotsanjay" className={styles.chatbotWrapper}>
+      <div className={styles.chatbotContainer}>
+        <div className={styles.chatbotHeader}>
+          <span>🤖</span>
+          <h4 className={styles.chatbotTitle}>AI Assistant</h4>
+        </div>
+        <div className={styles.messagesContainer}>
+          {messages.map((msg, index) => (
+            <div
+              key={index}
+              className={`${styles.message} ${
+                msg.sender === "User" ? styles.messageUser : styles.messageAssistant
+              }`}
+            >
+              {msg.text}
+            </div>
+          ))}
+        </div>
+        <form
+          className={styles.chatForm}
+          onSubmit={isLoading ? handleStreamSubmit : handleNonStreamSubmit}
+        >
+          <input
+            type="text"
+            value={input}
+            onChange={(e) => setInput(e.target.value)}
+            className={styles.chatInput}
+            placeholder="Type your message..."
+            disabled={isLoading}
+          />
+          <button
+            type="submit"
+            className={styles.chatButton}
+            disabled={isLoading}
           >
-            <strong>{msg.sender}:</strong> {msg.text}
-          </div>
-        ))}
+            {isLoading ? (
+              <>
+                <span>Loading</span>
+                <span>⏳</span>
+              </>
+            ) : (
+              <>
+                <span>Send</span>
+                <span>➤</span>
+              </>
+            )}
+          </button>
+        </form>
       </div>
-      <form id="chatbotsanjay"
-        onSubmit={isLoading ? handleStreamSubmit : handleNonStreamSubmit}
-        style={{ display: "flex", gap: "10px" }}
-      >
-        <input id="chatinput"
-          type="text"
-          value={input}
-          onChange={(e) => setInput(e.target.value)}
-          style={{ flexGrow: 1, padding: "10px" }}
-          placeholder="Ask me something..."
-          disabled={isLoading}
-        />
-        <button id="chatbutton" type="submit" disabled={isLoading}>
-          {isLoading ? "Streaming..." : "Send"}
-        </button>
-      </form>
     </div>
   );
 };

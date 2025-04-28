@@ -110,3 +110,135 @@
     align-items: center;
   }
 }
+
+/* Chatbot Styles */
+.chatbotWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60vh;
+  margin: 20px 0;
+}
+
+.chatbotContainer {
+  background-color: #ffffff;
+  width: 400px;
+  height: 550px;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.chatbotHeader {
+  background-color: #007bff;
+  color: white;
+  padding: 15px 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.chatbotTitle {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.messagesContainer {
+  flex: 1;
+  padding: 20px;
+  overflow-y: auto;
+  background-color: #f8f9fa;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.message {
+  max-width: 80%;
+  padding: 10px 15px;
+  border-radius: 15px;
+  font-size: 14px;
+  line-height: 1.4;
+  word-break: break-word;
+}
+
+.messageUser {
+  align-self: flex-end;
+  background-color: #007bff;
+  color: white;
+  border-radius: 15px 15px 0 15px;
+}
+
+.messageAssistant {
+  align-self: flex-start;
+  background-color: #e9ecef;
+  color: #333;
+  border-radius: 15px 15px 15px 0;
+}
+
+.chatForm {
+  padding: 15px;
+  background-color: white;
+  border-top: 1px solid #e9ecef;
+  display: flex;
+  gap: 10px;
+}
+
+.chatInput {
+  flex: 1;
+  padding: 12px 15px;
+  border: 1px solid #e9ecef;
+  border-radius: 25px;
+  outline: none;
+  font-size: 14px;
+  transition: border-color 0.3s ease;
+}
+
+.chatInput:focus {
+  border-color: #007bff;
+}
+
+.chatButton {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  padding: 12px 20px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.chatButton:hover {
+  background-color: #0056b3;
+}
+
+.chatButton:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+}
+
+/* Scrollbar styling */
+.messagesContainer::-webkit-scrollbar {
+  width: 6px;
+}
+
+.messagesContainer::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+.messagesContainer::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 3px;
+}
+
+.messagesContainer::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
