@@ -10,28 +10,43 @@ export const Navbar = () => {
 
   const toggleChatbot = () => {
     setIsChatbotOpen(!isChatbotOpen);
+    setMenuOpen(false);
+  };
+
+  const toggleMenu = () => {
+    setMenuOpen(!menuOpen);
+  };
+
+  const closeMenu = () => {
+    setMenuOpen(false);
   };
 
   return (
-    <nav  className={styles.navbar}>
+    <nav className={styles.navbar}>
       <div className={styles.navbarContent}>
-        <a href="/" className={styles.navbarLogo}>
+        <a href="/" className={styles.navbarLogo} onClick={closeMenu}>
           Portfolio
         </a>
-        <div className={styles.navbarLinks}>
-          <a href="#home" className={styles.navbarLink}>
+        <div className={styles.menuIcon} onClick={toggleMenu}>
+          <img 
+            src={menuOpen ? getImageUrl("nav/closeIcon.png") : getImageUrl("nav/menuIcon.png")} 
+            alt="menu" 
+          />
+        </div>
+        <div className={`${styles.navbarLinks} ${menuOpen ? styles.menuOpen : ''}`}>
+          <a href="#home" className={styles.navbarLink} onClick={closeMenu}>
             Home
           </a>
-          <a href="#about" className={styles.navbarLink}>
+          <a href="#about" className={styles.navbarLink} onClick={closeMenu}>
             About
           </a>
-          <a href="#experience" className={styles.navbarLink}>
+          <a href="#experience" className={styles.navbarLink} onClick={closeMenu}>
             Experience
           </a>
-          <a href="#projects" className={styles.navbarLink}>
+          <a href="#projects" className={styles.navbarLink} onClick={closeMenu}>
             Projects
           </a>
-          <a href="#contact" className={styles.navbarLink}>
+          <a href="#contact" className={styles.navbarLink} onClick={closeMenu}>
             Contact
           </a>
           <button onClick={toggleChatbot} className={styles.navbarLink}>
