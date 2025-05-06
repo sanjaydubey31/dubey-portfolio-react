@@ -29,8 +29,8 @@ export const Chatbot = ({ isOpen, onClose }) => {
 
     try {
       const res = await axios.post(
-        //"https://sanjaydubey733-dubey-portfolio.hf.space/langChain",
-        "http://localhost:8013/langChain",
+        "https://sanjaydubey733-dubey-portfolio.hf.space/langChain",
+        //"http://localhost:8013/langChain",
         payload,
         {
           headers: {
