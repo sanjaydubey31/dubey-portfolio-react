@@ -1,11 +1,24 @@
 [
-  {
-    "title": "React",
-    "imageSrc": "skills/react.png"
-  },
+  
   {
     "title": "Java",
     "imageSrc": "skills/java.jpg"
+  },
+  {
+    "title": "JavaScript",
+    "imageSrc": "skills/node.png"
+  },
+  {
+    "title": "Python",
+    "imageSrc": "skills/python.jpeg"
+  },
+  {
+    "title": "Salesforce",
+    "imageSrc": "skills/salesforce.jpeg"
+  },
+  {
+    "title": "React",
+    "imageSrc": "skills/react.png"
   },
   {
     "title": "Microservice",
