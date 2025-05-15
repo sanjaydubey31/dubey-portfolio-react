@@ -7,7 +7,7 @@ import {UserApp} from "../UserForm/UserForm";
 
 export const Hero = () => {
   return (
-    <section className={styles.container}>
+    <section className={styles.container} id="home">
       <div  className={styles.content}>
         <h2 className={styles.title}>Hi, I'm Sanjay Dubey</h2>
         <p className={styles.description}>
@@ -15,7 +15,7 @@ export const Hero = () => {
         </p>
 
         <p className={styles.description}>
-        Over the years, I’ve worked on projects that streamline processes, improve user experiences, and unlock new possibilities through innovative thinking. My approach is a mix of technical expertise, creativity, and collaboration. I believe the best solutions come from working together and thinking outside the box.
+        Over the years, I've worked on projects that streamline processes, improve user experiences, and unlock new possibilities through innovative thinking. My approach is a mix of technical expertise, creativity, and collaboration. I believe the best solutions come from working together and thinking outside the box.
         </p>
      
         <p className={styles.description}>

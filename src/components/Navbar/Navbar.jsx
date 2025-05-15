@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import styles from "./Navbar.module.css";
 import { getImageUrl } from "../../utils";
 import { Chatbot } from "../Chatbot/Chatbot";
+import { Link } from "react-router-dom";
 
 export const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -24,9 +25,9 @@ export const Navbar = () => {
   return (
     <nav className={styles.navbar}>
       <div className={styles.navbarContent}>
-        <a href="/" className={styles.navbarLogo} onClick={closeMenu}>
+        <Link to="/" className={styles.navbarLogo} onClick={closeMenu}>
           Portfolio
-        </a>
+        </Link>
         <div className={styles.menuIcon} onClick={toggleMenu}>
           <img 
             src={menuOpen ? getImageUrl("nav/closeIcon.png") : getImageUrl("nav/menuIcon.png")} 
@@ -34,21 +35,24 @@ export const Navbar = () => {
           />
         </div>
         <div className={`${styles.navbarLinks} ${menuOpen ? styles.menuOpen : ''}`}>
-          <a href="#home" className={styles.navbarLink} onClick={closeMenu}>
+          <Link to="/#home" className={styles.navbarLink} onClick={closeMenu}>
             Home
-          </a>
-          <a href="#about" className={styles.navbarLink} onClick={closeMenu}>
+          </Link>
+          <Link to="/#about" className={styles.navbarLink} onClick={closeMenu}>
             About
-          </a>
-          <a href="#experience" className={styles.navbarLink} onClick={closeMenu}>
+          </Link>
+          <Link to="/#experience" className={styles.navbarLink} onClick={closeMenu}>
             Experience
-          </a>
-          <a href="#projects" className={styles.navbarLink} onClick={closeMenu}>
+          </Link>
+          <Link to="/#projects" className={styles.navbarLink} onClick={closeMenu}>
             Projects
-          </a>
-          <a href="#contact" className={styles.navbarLink} onClick={closeMenu}>
+          </Link>
+          <Link to="/blog" className={styles.navbarLink} onClick={closeMenu}>
+            Blog
+          </Link>
+          <Link to="/#contact" className={styles.navbarLink} onClick={closeMenu}>
             Contact
-          </a>
+          </Link>
           <button onClick={toggleChatbot} className={styles.navbarLink}>
             AI Assistant
           </button>
