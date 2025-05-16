@@ -45,7 +45,7 @@ export const Blog = () => {
   return (
     <div className={styles.blogContainer}>
         <br/><br/>
-      <h1>Blog</h1>
+      <h1>My Blogs</h1>
       {blogPosts.length === 0 ? (
         <p>Loading posts...</p>
       ) : (
