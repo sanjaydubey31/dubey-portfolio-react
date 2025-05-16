@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import styles from "./Blog.module.css";
+import { marked } from "marked";
 
 // Vite-specific dynamic import for markdown files
 const postFiles = import.meta.glob("../../blogs/*.md", { as: "raw" });
@@ -35,9 +36,7 @@ export const Blog = () => {
         <button className={styles.backBtn} onClick={() => setSelectedPost(null)}>&larr; Back to all posts</button>
         <div className={styles.postCard}>
           <h2 className={styles.postTitle}>{selectedPost.title}</h2>
-          <div className={styles.postContent}>
-            <pre style={{whiteSpace: 'pre-wrap'}}>{selectedPost.content}</pre>
-          </div>
+          <div className={styles.postContent} dangerouslySetInnerHTML={{ __html: marked.parse(selectedPost.content) }} />
         </div>
       </div>
     );
@@ -45,7 +44,8 @@ export const Blog = () => {
 
   return (
     <div className={styles.blogContainer}>
-      <br/><br/><h1>Blogs</h1>
+        <br/><br/>
+      <h1>Blog</h1>
       {blogPosts.length === 0 ? (
         <p>Loading posts...</p>
       ) : (
