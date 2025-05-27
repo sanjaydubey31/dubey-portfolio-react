@@ -35,9 +35,9 @@ export const Navbar = () => {
           />
         </div>
         <div className={`${styles.navbarLinks} ${menuOpen ? styles.menuOpen : ''}`}>
-          <Link to="/#home" className={styles.navbarLink} onClick={closeMenu}>
+          {/* <Link to="/#home" className={styles.navbarLink} onClick={closeMenu}>
             Home
-          </Link>
+          </Link> */}
           <Link to="/#about" className={styles.navbarLink} onClick={closeMenu}>
             About
           </Link>
@@ -46,6 +46,9 @@ export const Navbar = () => {
           </Link>
           <Link to="/#projects" className={styles.navbarLink} onClick={closeMenu}>
             Projects
+          </Link>
+          <Link to="/resume" className={styles.navbarLink} onClick={closeMenu}>
+            Resume
           </Link>
           <Link to="/blog" className={styles.navbarLink} onClick={closeMenu}>
             Blog

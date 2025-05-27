@@ -8,6 +8,7 @@ import { Projects } from "./components/Projects/Projects";
 import { Chatbot } from "./components/Chatbot/Chatbot";
 import { UserApp } from "./components/UserForm/UserForm";
 import { Blog } from "./components/Blog/Blog";
+import { Resume } from "./components/Resume/Resume";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
@@ -46,6 +47,7 @@ function App() {
         <Routes>
           <Route path="/" element={<MainContent />} />
           <Route path="/blog" element={<Blog />} />
+          <Route path="/resume" element={<Resume />} />
         </Routes>
       </BrowserRouter>
     </div>
